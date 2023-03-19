@@ -1,7 +1,6 @@
 
 import { FilmList } from 'components/FilmList/FilmList';
 import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { getTrendingFilm } from '../services/fetchApiFilm';
 
 const Home = () => { 
@@ -15,11 +14,12 @@ const Home = () => {
         setTrendFilm([...films.results])
       } catch(err) {
         console.log(err.message);
-      } finally { };
+      } 
     }
     fetchTrendFilm();
   }, [])
-  console.log(trendFilm);
+
+
     return (
       <ul>
         <FilmList films={trendFilm} />
