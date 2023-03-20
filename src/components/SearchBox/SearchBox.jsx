@@ -3,6 +3,7 @@ import React from 'react';
   import { ToastContainer, toast } from 'react-toastify';
 
   import 'react-toastify/dist/ReactToastify.css';
+import { SearchInput, SearchBtn } from "./SearchBox.styled";
 
 
 export const SearchBox = () => { 
@@ -35,8 +36,8 @@ export const SearchBox = () => {
     return (
      <div>
         <form onSubmit={handleSubmit}>
-                <input type="text" name="searchQuery" defaultValue={search} autoComplete="off" autoFocus placeholder="Search images and photos"/>
-                <button type="submit">Search</button>
+                <SearchInput type="text" name="searchQuery" defaultValue={search} autoComplete="off" autoFocus placeholder="Search movies"/>
+                <SearchBtn type="submit">Search</SearchBtn>
             </form>
             <ToastContainer
             position="top-right"

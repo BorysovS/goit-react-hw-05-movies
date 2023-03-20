@@ -2,6 +2,7 @@ import { MovieCard } from "components/MovieCard/MovieCard";
 import { useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { Suspense } from "react";
+import { GoBackLink } from "./MovieDetails.styled";
 
 const MovieDetails = () => { 
 
@@ -10,7 +11,7 @@ const MovieDetails = () => {
 
     return (
         <div>
-            <Link to={backlinkLocationRef.current}>Go Back</Link>
+            <GoBackLink to={backlinkLocationRef.current}>Go Back</GoBackLink>
             <MovieCard />
             <ul>
                 <li>

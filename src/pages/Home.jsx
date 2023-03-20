@@ -2,6 +2,7 @@
 import { FilmList } from 'components/FilmList/FilmList';
 import { useEffect, useState } from 'react';
 import { getTrendingFilm } from '../services/fetchApiFilm';
+import { StyleListFilm } from './Home.styled';
 
 const Home = () => { 
   const [trendFilm, setTrendFilm] = useState([])
@@ -21,9 +22,9 @@ const Home = () => {
 
 
     return (
-      <ul>
+      <StyleListFilm>
         <FilmList films={trendFilm} />
-    </ul>
+    </StyleListFilm>
 )
 }
 

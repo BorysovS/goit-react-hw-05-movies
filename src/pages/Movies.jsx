@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom"
 import { getSearchMovie } from "services/fetchApiFilm";
 import { FilmList } from 'components/FilmList/FilmList';
+import { ListMoviesSearch } from "./Movies.styled";
 
 
 
@@ -36,7 +37,9 @@ const Movies = () => {
     return (
         <div>
             <SearchBox />
-            {searchFilm && <FilmList films={searchFilm} />}
+            <ListMoviesSearch>
+                {searchFilm && <FilmList films={searchFilm} />}
+            </ListMoviesSearch>
     </div>
 )
 }
