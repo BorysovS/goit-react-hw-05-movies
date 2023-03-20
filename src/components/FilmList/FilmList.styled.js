@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 export const LinkStyle = styled(Link)`
   text-decoration: none;
   color: #0f2e44;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const FilmListItem = styled.li`
   width: 500px;
   border: 1px solid black;
-  padding: 12px;
+  height: 70px;
   text-align: center;
   border-radius: 12px;
   background-color: #e5eced;
@@ -18,4 +23,8 @@ export const FilmListItem = styled.li`
   :hover {
     background-color: #a9d4db;
   }
+`;
+
+export const FilmTitle = styled.h2`
+  margin: 0;
 `;

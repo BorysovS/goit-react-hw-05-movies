@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { LinkStyle, FilmListItem } from './FilmList.styled';
+import { LinkStyle, FilmListItem, FilmTitle } from './FilmList.styled';
 
 export const FilmList = ({ films }) => {
     const location = useLocation()
@@ -11,7 +11,7 @@ export const FilmList = ({ films }) => {
                 films.map(film => (
                     < FilmListItem key={film.id} >
                         <LinkStyle to={`/movies/${film.id}`} state={{from:location}}>
-                            <h2>{film.title}</h2>
+                            <FilmTitle>{film.title}</FilmTitle>
                         </LinkStyle>
                     </FilmListItem>
                 ))
